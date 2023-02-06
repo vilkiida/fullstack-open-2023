@@ -10,7 +10,13 @@ const Header = (props) => (
   <h1>{props.text}</h1>
 )
 
-const Statistics = ({ good, neutral, bad, all, average, positive }) => (
+const Statistics = ({ good, neutral, bad, all, average, positive }) => {
+  if (all === 0) {
+    return(
+      <div>No feedback was given</div>
+    )
+  }
+  return (
   <div>
     <p>good {good}</p>
     <p>neutral {neutral}</p>
@@ -19,7 +25,7 @@ const Statistics = ({ good, neutral, bad, all, average, positive }) => (
     <p>average {average}</p>
     <p>positive {positive}%</p>
   </div>
-)
+)}
 
 const App = () => {
   const [good, setGood] = useState(0)
