@@ -10,7 +10,7 @@ const Header = (props) => (
   <h1>{props.text}</h1>
 )
 
-const Results = ({ good, neutral, bad, all, average, positive }) => (
+const Statistics = ({ good, neutral, bad, all, average, positive }) => (
   <div>
     <p>good {good}</p>
     <p>neutral {neutral}</p>
@@ -43,7 +43,7 @@ const App = () => {
       </div>
       <div>
         <Header text='statistics'/>
-        <Results good={good} neutral={neutral} bad={bad} all={all} average={average} positive={positive}/>
+        <Statistics good={good} neutral={neutral} bad={bad} all={all} average={average} positive={positive}/>
       </div>
     </div>
   )
