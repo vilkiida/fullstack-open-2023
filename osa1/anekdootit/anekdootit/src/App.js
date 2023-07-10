@@ -20,7 +20,10 @@ const App = () => {
   const getRandomNumber = (max) => {
     return Math.floor(Math.random()*max)
     }
-  const getNext = () => setSelected(getRandomNumber(8))
+  const getNext = () => {
+    const newSelected = getRandomNumber(8)
+    setSelected(newSelected)
+  }
 
   return (
     <div>
