@@ -1,4 +1,4 @@
-# Fullstack open 2022 kurssin tehtävät:
+# Fullstack open 2023 kurssin tehtävät:
 ## Tehdyt tehtävät:
 
 #### Osa 0:
