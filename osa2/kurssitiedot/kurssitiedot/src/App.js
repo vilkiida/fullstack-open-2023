@@ -30,6 +30,7 @@ const App = () => {
   return (
     <div>
       <Course course={course} />
+      <Total parts={course.parts} />
     </div>
   )
 }
@@ -57,10 +58,13 @@ const Part = ({ part }) => {
     <p>{part.name} {part.exercises}</p>
   )
 }
-// const Total = ( parts ) => {
-//   return ( 
-//     <p>Number of exercises {parts[0].exercises + parts[1].exercises + parts[2].exercises}</p>
-//   )
-// }
+
+const Total = ({ parts }) => {
+  let sum = 0
+  parts.map(part => sum += part.exercises)
+  return ( 
+    <b>Number of exercises {sum}</b>
+  )
+}
 
 export default App
